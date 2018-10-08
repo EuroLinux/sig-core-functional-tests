@@ -4,7 +4,7 @@
 # reusing the script from LAMP-Tests
 
 t_Log "Running $0 - php-cli basic interaction with mysql55 test."
-if [ $centos_ver != 5 ]
+if [ $el_ver != 5 ]
 then
   t_Log "This is not a C5-system - skipping"
   exit 0

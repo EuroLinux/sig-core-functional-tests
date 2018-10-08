@@ -3,8 +3,8 @@
 
 t_Log "Running $0 - check if iptables kernel modules are loaded"
 
-if [ "$centos_ver" = "7" ];then
- t_Log "CentOS $centos_ver uses firewalld and not iptables -> SKIP"
+if [ "$el_ver" = "7" ];then
+ t_Log "CentOS $el_ver uses firewalld and not iptables -> SKIP"
  t_CheckExitStatus 0
  exit 0
 fi

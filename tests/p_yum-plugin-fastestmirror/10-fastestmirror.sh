@@ -20,10 +20,10 @@ grep 'enabled=1' /etc/yum/pluginconf.d/fastestmirror.conf > /dev/null
 t_CheckExitStatus $?
 
 # timedhosts file ends up in different places on c5 and c6
-if [ $centos_ver == 5 ]; then 
+if [ $el_ver == 5 ]; then 
 	BaseDir=/var/cache/yum/
 else
-	BaseDir=/var/cache/yum/`uname -i`/$centos_ver
+	BaseDir=/var/cache/yum/`uname -i`/$el_ver
 fi
 
 t_Log "Running $0 - Ensure we have mirrorlist enabled."

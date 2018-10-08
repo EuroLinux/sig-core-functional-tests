@@ -8,7 +8,7 @@ TEST_FILE_PATH=/tmp/p_file_link_test
 
 ln -s /etc/hosts $TEST_FILE_PATH
 
-case $centos_ver in
+case $el_ver in
   5)
     mimetype='x-not-regular-file'
     ;;

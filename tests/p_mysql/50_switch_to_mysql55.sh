@@ -4,7 +4,7 @@
 
 t_Log "Running $0 - switching to mysql55 on C5."
 
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
 then
   t_ServiceControl mysqld stop
   t_ServiceControl mysql55-mysqld start >/dev/null 2>&1

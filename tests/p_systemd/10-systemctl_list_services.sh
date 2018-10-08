@@ -3,7 +3,7 @@
 #         Rene Diepstraten <rene@renediepstraten.nl>
 
 t_Log "Running $0 - Checking if systemctl can check if a service is enabled"
-[ ${centos_ver} -lt 7 ] && { t_Log "Systemd is part of el since el7, skipping systemd tests..." ; exit ; }
+[ ${el_ver} -lt 7 ] && { t_Log "Systemd is part of el since el7, skipping systemd tests..." ; exit ; }
 
 # auditd is used as example because it's standard with minimal install
 

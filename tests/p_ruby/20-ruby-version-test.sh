@@ -7,10 +7,10 @@
 
 t_Log "Running $0 - Check version of ruby."
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
   ruby -v | grep -q '2.0'
   ret_val=$?
-elif [ "$centos_ver" = "6" ] ; then
+elif [ "$el_ver" = "6" ] ; then
   ruby -v | grep -q '1.8.7'
   ret_val=$?
 else

@@ -10,18 +10,18 @@ function ExitFail {
     exit $FAIL
 }
 
-if [ $centos_ver -lt 6 ]
+if [ $el_ver -lt 6 ]
   then
   exit 0
 fi
 
 t_Log "Checking binaries are present and run on C6/C7"
 
-if [ $centos_ver == 7 ]
+if [ $el_ver == 7 ]
 then
   [ "$(readlink -e /usr/bin/gunzip)" == "/usr/bin/gunzip" ] || ExitFail
   [ "$(readlink -e /usr/bin/gzip)" == "/usr/bin/gzip" ] || ExitFail
-elif [ $centos_ver == 6 ]
+elif [ $el_ver == 6 ]
 then
   [ "$(readlink -e /bin/gunzip)" == "/bin/gunzip" ] || ExitFail
   [ "$(readlink -e /bin/gzip)" == "/bin/gzip" ] || ExitFail

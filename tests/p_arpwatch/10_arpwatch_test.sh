@@ -6,7 +6,7 @@ t_Log "Running $0 - arpwatch on interface with default gateway"
 
 # arpwatch is broken in el7
 # See https://bugzilla.redhat.com/show_bug.cgi?id=1044062
-[[ $centos_ver -eq 7 ]] && { 
+[[ $el_ver -eq 7 ]] && { 
   t_Log "arpwatch is broken on el7. Skipping test." 
   exit
 }

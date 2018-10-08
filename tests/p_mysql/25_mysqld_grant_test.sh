@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - MySQL GRANT privileges test"
 
-if [ $centos_ver -gt 6 ]
+if [ $el_ver -gt 6 ]
 then
   t_Log 'mysql is only supported on C5 and C6, skipping'
   t_CheckExitStatus 0       

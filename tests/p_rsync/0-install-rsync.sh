@@ -5,7 +5,7 @@ t_Log "Running $0 - installing rsync and xinetd."
 t_InstallPackage xinetd rsync
 
 # Restart in case previous tests allready installed xinetd
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
  systemctl start rsyncd.service
 else
  # enable rsync in /etc/xinet.d/rsync

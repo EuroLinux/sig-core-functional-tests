@@ -11,7 +11,7 @@ if [ "$uname_arch" == "aarch64" ] || [ "$uname_arch" == "armv7l" ] || [ "$uname_
   exit 0
 fi
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
   for id in kpatch "Driver update" kernel
   do
     t_Log "Verifying x.509 CentOS ${id}"

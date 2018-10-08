@@ -99,8 +99,8 @@ function t_DistCheck
 {
 	rpm -q $(rpm -qf /etc/redhat-release) --queryformat '%{version}\n'|cut -f 1 -d '.'
 }
-# Additionally set distro release to $centos_ver
-centos_ver=$(t_DistCheck)
+# Additionally set distro release to $el_ver
+el_ver=$(t_DistCheck)
 
 # Description: Get a package (rpm) version number
 function t_GetPkgVer
@@ -156,5 +156,5 @@ export -f t_GetArch
 export -f t_CheckForPort
 export -f t_Assert
 export -f t_Assert_Equals
-export centos_ver
+export el_ver
 export arch

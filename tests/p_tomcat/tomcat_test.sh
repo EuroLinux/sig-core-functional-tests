@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - Tomcat basic test."
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
  string_tosearch="you've successfully installed Tomcat. Congratulations!"
 else
  string_tosearch="you've setup Tomcat successfully. Congratulations!"

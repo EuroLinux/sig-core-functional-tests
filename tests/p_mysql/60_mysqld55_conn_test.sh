@@ -2,7 +2,7 @@
 
 t_Log "Running $0 - mysqld client can talk to mysql55 server."
 
-if [ $centos_ver -gt 5 ]
+if [ $el_ver -gt 5 ]
 then
   t_Log 'mysql55 is only avialable on C5, skipping'
   t_CheckExitStatus 0       

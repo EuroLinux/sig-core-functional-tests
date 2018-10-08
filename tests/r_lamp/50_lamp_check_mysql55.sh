@@ -9,13 +9,13 @@
 
 # starting with 5.10, we have to differ between mysql55 and mysql
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
   t_Log "no mysql55 on CentOS 7 ... SKIP"
   exit 0
 fi
 
 
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
 then
   readonly DAEMONS=( httpd mysql55-mysqld )
 else

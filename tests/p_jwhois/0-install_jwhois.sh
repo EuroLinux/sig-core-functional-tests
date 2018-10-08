@@ -3,7 +3,7 @@
 
 # nc (netcat) is required for the test
 
-if [ "$centos_ver" = "7" ] ;then
+if [ "$el_ver" = "7" ] ;then
   whois_pkg="whois"
 else
   whois_pkg="jwhois"

@@ -4,7 +4,7 @@
 # NFS
 t_InstallPackage nfs-utils
 
-if [ "$centos_ver" = "5" ] ; then
+if [ "$el_ver" = "5" ] ; then
    t_serviceControl portmap restart
 else
    t_ServiceControl rpcbind restart

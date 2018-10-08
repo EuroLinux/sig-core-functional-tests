@@ -34,7 +34,7 @@ if [ "$?" -ne "0" ];then
 fi
 
 # run only on centos 7 or greater
-[[ $centos_ver -lt 7 ]] && exit
+[[ $el_ver -lt 7 ]] && exit
 
 
 rlJournalStart

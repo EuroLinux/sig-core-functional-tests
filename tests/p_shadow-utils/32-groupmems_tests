@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Iain Douglas <centos@1n6.org.uk>
-[ $centos_ver == '5'  ] && exit
+[ $el_ver == '5'  ] && exit
 t_Log "Running $0 - group add tests"
 
 echo "Simple groupmems test"

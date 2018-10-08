@@ -8,7 +8,7 @@
 
 t_Log "Running $0 - installation and startup of freeradius."
 
-if [ $centos_ver -gt 5 ]
+if [ $el_ver -gt 5 ]
 then
   #Install Freeradius (V2/V3)
   t_InstallPackage freeradius freeradius-utils
@@ -18,7 +18,7 @@ else
 fi
 
 # start daemon with default settings
-if [ $centos_ver -gt 5 ]
+if [ $el_ver -gt 5 ]
 then
   t_ServiceControl radiusd start
 else

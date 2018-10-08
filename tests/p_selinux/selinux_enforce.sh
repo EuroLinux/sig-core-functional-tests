@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - check if SELinux is in enforcing mode"
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
   selinux_file=/sys/fs/selinux/enforce
 else
   selinux_file=/selinux/enforce

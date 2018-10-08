@@ -5,8 +5,8 @@
 
 t_Log "Running $0 - attempting to install procinfo"
 
-if [ "$centos_ver" -gt "5" ] ; then
-   t_Log "It seems to be a CentOS $centos_ver system, this test will be disabled -> SKIP"
+if [ "$el_ver" -gt "5" ] ; then
+   t_Log "It seems to be a CentOS $el_ver system, this test will be disabled -> SKIP"
    exit 0
 else
    # ProcInfo Utility Package

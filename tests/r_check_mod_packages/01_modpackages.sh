@@ -12,7 +12,7 @@ elif [ "$uname_arch" == "armv7l" ] ; then
     ret_val=0
 else
   ret_val=0
-  if [ "$centos_ver" = "7" ] ; then
+  if [ "$el_ver" = "7" ] ; then
    
    t_Log "Running $0 - Checking current repositories for .el7.centos on modified files"
    uname_arch=$(uname -m)

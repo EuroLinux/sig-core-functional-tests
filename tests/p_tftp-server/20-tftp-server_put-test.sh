@@ -5,7 +5,7 @@
 
 t_Log "Running $0 - tftp-server put file test."
 
-if [ "$centos_ver" -gt "5" ]; then
+if [ "$el_ver" -gt "5" ]; then
   setsebool tftp_anon_write 1
   TFTP_DIR=/var/lib/tftpboot
 else

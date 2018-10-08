@@ -7,10 +7,10 @@ t_Log "Running $0 - python can retrieve mysql-server version information."
 # we need a working and running mysql server
 # starting with 5.10, we have to differ between mysql55 and mysql
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
   my_packages="mariadb mariadb-server nc"
   mysql_service="mariadb"
-elif [ "$centos_ver" = "5" ] ;then
+elif [ "$el_ver" = "5" ] ;then
   my_packages="mysql mysql-server nc mysql55-mysql-server"
   mysql_service="mysqld"
 else

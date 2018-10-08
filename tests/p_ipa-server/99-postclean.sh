@@ -41,7 +41,7 @@ if (t_GetPkgRel basesystem | grep -qE 'el(6|7)') && !(t_GetArch | grep -qE 'aarc
   
   rm -f /tmp/*.ipa-test /etc/httpd/conf.d/*
 
-  if [ "$centos_ver" = "7" ] ; then
+  if [ "$el_ver" = "7" ] ; then
     hostnamectl set-hostname $(cat /tmp/hostname.ipa-tests) 
   else
     hostname $(cat /tmp/hostname.ipa-tests)

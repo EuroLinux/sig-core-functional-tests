@@ -44,7 +44,7 @@ fi
 
 # Check that passwd -e expires an account. Field 3 of /etc/shadow is set to 0
 t_Log "Check password can be expired"
-if [ $centos_ver == '5' ]
+if [ $el_ver == '5' ]
   then
   t_Log 'This is a C5 system - option -e does not exist - skipping'
 else

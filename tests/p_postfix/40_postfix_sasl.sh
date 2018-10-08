@@ -8,7 +8,7 @@ t_InstallPackage dovecot
 
 #creating backups of changed files
 cp -a /etc/postfix/main.cf /etc/postfix/main.cf_testing
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   cp -a /etc/dovecot.conf /etc/dovecot.conf_testing
 else
@@ -30,7 +30,7 @@ smtpd_recipient_restrictions =
 EOF
 
 #adding parameters to dovecot
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   cat > /etc/dovecot.conf <<EOF
 protocol imap {
@@ -84,7 +84,7 @@ ret_val=$?
 
 # restoring changed files
 mv -f /etc/postfix/main.cf_testing /etc/postfix/main.cf
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   mv -f /etc/dovecot.conf_testing /etc/dovecot.conf
 else

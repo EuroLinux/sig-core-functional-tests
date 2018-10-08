@@ -8,7 +8,7 @@ t_Log "Running $0 - install a minimal lamp stack, and test it"
 
 # MySQL
 # starting with 5.10, we have to differ between mysql55 and mysql
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
 then
   t_InstallPackage mysql55-mysql-server httpd mysql55-mysql php php-mysql wget
   t_ServiceControl mysql55-mysqld stop

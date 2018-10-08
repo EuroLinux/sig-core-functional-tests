@@ -8,7 +8,7 @@ function ExitFail {
     exit $FAIL
 }
 
-[ $centos_ver != '5'  ] && exit
+[ $el_ver != '5'  ] && exit
 
 # Some ov the binaries respond to a --version and some don't. Of those that 
 # don't, some exit with a status of 1 and others exit with a status of 2 

@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - /etc/os-release has correct ABRT string for CentOS 7"
 
-if [ "$centos_ver" = "7" ];then
+if [ "$el_ver" = "7" ];then
   for string in CENTOS_MANTISBT_PROJECT=\"CentOS-7\" CENTOS_MANTISBT_PROJECT_VERSION=\"7\" REDHAT_SUPPORT_PRODUCT=\"centos\" REDHAT_SUPPORT_PRODUCT_VERSION=\"7\" 
   do 
     grep -q $string /etc/os-release
