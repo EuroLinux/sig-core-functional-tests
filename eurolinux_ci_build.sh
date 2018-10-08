@@ -1,5 +1,5 @@
 #!/bin/sh
-# Build steps used in CentOS CI
+# Build steps used in EuroLinux CI
 
 yum -y update
 uname -a
