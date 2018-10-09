@@ -1,10 +1,11 @@
 #!/bin/bash
 # Author: Fabian Arrotin <arrfab@centos.org>
+# Author: Alex Baranowski <ab@euro-linux.com>
 
-t_Log "Running $0 - /etc/os-release has correct ABRT string for CentOS 7"
+t_Log "Running $0 - /etc/os-release has correct ABRT string for EuroLinux 7"
 
 if [ "$el_ver" = "7" ];then
-  for string in CENTOS_MANTISBT_PROJECT=\"CentOS-7\" CENTOS_MANTISBT_PROJECT_VERSION=\"7\" REDHAT_SUPPORT_PRODUCT=\"centos\" REDHAT_SUPPORT_PRODUCT_VERSION=\"7\" 
+  for string in NAME=\"EuroLinux\"  ID_LIKE=\"eurolinux scientific centos fedora\" ID=\"rhel\"
   do 
     grep -q $string /etc/os-release
     if [ $? -ne "0" ];then
