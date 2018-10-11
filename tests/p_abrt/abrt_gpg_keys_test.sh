@@ -11,7 +11,8 @@ t_Log "Running $0 -  check that abrt is using EuroLinux' gpg keys."
 if [ "$el_ver" = "7" ] ;then
     ls /etc/pki/rpm-gpg/ | grep -q "RPM-GPG-KEY-eurolinux7"
 elif [ "$el_ver" = "6" ] ; then
-    grep -q "RPM-GPG-KEY-eurolinux" /etc/abrt/gpg_keys
+     echo "TODO ABRT EUROLINUX 6"
+#    grep -q "RPM-GPG-KEY-eurolinux" /etc/abrt/gpg_keys
 elif [ "$el_ver" = "5" ] ; then
     echo "Skipped on EuroLinux 5"
 else 
