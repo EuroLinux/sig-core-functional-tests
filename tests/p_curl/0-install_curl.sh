@@ -4,3 +4,4 @@
 
 t_Log "$0 - installing curl"
 t_InstallPackage curl
+sudo update-ca-trust force-enable
