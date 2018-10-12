@@ -13,6 +13,7 @@ from datetime import datetime
 from fnmatch import fnmatch
 
 print ("TODO This test is not perfect due to EuroLinux overides!")
+print ("TODO This test is not perfect due to EuroLinux overides - KOJI AND packager")
 def log(methodstring):
     localtime = datetime.now()
     print("[+] {0} -> {1}".format(localtime.strftime("%a %b %e %H:%M:%S %Z %Y"), methodstring))
@@ -33,7 +34,7 @@ log('Running check-rpminfo.py - Check rpminfo Attributes')
 # globs in the value if necessary.
 required_attrs = {
     'vendor': ['Scientific Linux', 'EuroLinux'],
-    'packager': ['Scientific Linux', 'EuroLinux', '(none)'],
+    'packager': ['Scientific Linux', 'EuroLinux', '(none)', 'Koji'],
     }
 
 # special_overrides is a dictionary of packages and a list of attributes

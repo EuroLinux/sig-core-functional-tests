@@ -4,10 +4,10 @@
 
 t_Log "Running $0 - Create PDF from postscript from text, and convert PDF back to text and check contents"
 
-if [ "$el_ver" = "5" ] ;then
-  FILE=/etc/redhat-release
-else
+if [ "$el_ver" = "7" ] ;then
   FILE=/etc/el-release
+else
+  FILE=/etc/redhat-release
 fi
 FIND='EuroLinux'
 PS_FILE=/var/tmp/test.ps
