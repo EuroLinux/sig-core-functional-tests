@@ -7,8 +7,8 @@ t_Log "Running $0 - /etc/el-release has correct branding"
 if [ "$el_ver" = "5" ] ; then
     grep "EuroLinux" /etc/redhat-release >/dev/null 2>&1
 else
+    [ -e /etc/el-release ] && grep "EuroLinux" /etc/el-release >/dev/null 2>&1
     grep "EuroLinux" /etc/redhat-release >/dev/null 2>&1
-    grep "EuroLinux" /etc/el-release >/dev/null 2>&1
 fi
 
 t_CheckExitStatus $?
