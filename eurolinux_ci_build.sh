@@ -1,5 +1,9 @@
 #!/bin/sh
 # Build steps used in EuroLinux CI
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+
 setup_ip_tables(){
     sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
     sudo iptables -A INPUT -p icmp -j ACCEPT
@@ -8,7 +12,7 @@ setup_ip_tables(){
     sudo iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
     sudo iptables -A FORWARD -j REJECT --reject-with icmp-host-prohibited
     sudo iptables-save | sudo tee /etc/sysconfig/iptables
-    sudo service iptables restart 
+    sudo service iptables restart
 }
 
 correct_vagrant(){
