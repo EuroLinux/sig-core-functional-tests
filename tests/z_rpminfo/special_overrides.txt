@@ -631,3 +631,11 @@ rpmforge-release-0.5.2-2.el6.rf: packager
 rpmfusion-free-release-6-1: packager
 SL_no_colorls-1.0-3: packager
 SL_password_for_singleuser-3.0-1: packager
+redhat-rpm-config-9.0.3-51.el6: vendor
+el-release-6.9-1: vendor
+mod_ssl-2.2.15-60.el6.5: vendor
+httpd-devel-2.2.15-60.el6.5: vendor
+httpd-debuginfo-2.2.15-60.el6.5: vendor
+httpd-manual-2.2.15-60.el6.5: vendor
+httpd-2.2.15-60.el6.5: vendor
+httpd-tools-2.2.15-60.el6.5: vendor
