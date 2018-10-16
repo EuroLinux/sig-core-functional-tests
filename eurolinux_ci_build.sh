@@ -2,6 +2,7 @@
 # Build steps used in EuroLinux CI
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "Changing directory to $DIR"
 cd $DIR
 
 setup_ip_tables(){
