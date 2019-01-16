@@ -12,6 +12,6 @@ if [ "$uname_arch" == "armv7l" ]; then
 fi
 
 lsb_release -i | grep -q "EuroLinux" && \
-lsb_release -d | grep -q "EuroLinux"  
+lsb_release -d | grep -q "EuroLinux"
 
 t_CheckExitStatus $?

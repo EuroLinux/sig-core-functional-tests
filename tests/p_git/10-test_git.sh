@@ -14,5 +14,5 @@ else
   t_Log "This test is skipped in CentOS5."
   ret_val=0
 fi
-  
+
 t_CheckExitStatus $ret_val

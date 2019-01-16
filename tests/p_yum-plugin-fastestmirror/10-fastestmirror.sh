@@ -20,7 +20,7 @@
 #t_CheckExitStatus $?
 #
 ## timedhosts file ends up in different places on c5 and c6
-#if [ $el_ver == 5 ]; then 
+#if [ $el_ver == 5 ]; then
 #	BaseDir=/var/cache/yum/
 #else
 #	BaseDir=/var/cache/yum/`uname -i`/$el_ver
@@ -37,7 +37,7 @@
 #hostsfound=`cat $BaseDir/timedhosts.txt | wc -l` > /dev/null
 #
 ## we need to make sure the file was recreated
-#if [ -f ${BaseDir}/timedhosts.txt ]; then 
+#if [ -f ${BaseDir}/timedhosts.txt ]; then
 #	if [ $hostsfound -lt 1 ]; then
 #		retval=1
 #	else
