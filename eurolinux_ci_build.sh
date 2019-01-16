@@ -18,6 +18,8 @@ setup_ip_tables(){
 
 correct_vagrant(){
     hash iptables 2> /dev/null && setup_ip_tables
+    echo "removing .git directory, it interfere with git tests"
+    rm -rf .git
 }
 
 # correct vagrant enviroment
