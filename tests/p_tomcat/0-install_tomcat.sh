@@ -1,5 +1,8 @@
 #!/bin/bash
 # Author: Athmane Madjoudj <athmanem@gmail.com>
+# Author: Alex Baranowski
+
+yum -y remove java\*
 
 if [ "$el_ver" = "7" ] ;then
  tomcat_packages="tomcat tomcat-admin-webapps tomcat-webapps"
