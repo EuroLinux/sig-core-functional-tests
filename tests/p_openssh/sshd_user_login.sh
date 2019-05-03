@@ -1,8 +1,14 @@
 #!/bin/sh
 # Author: Athmane Madjoudj <athmanem@gmail.com>
+# Author: Alex Baranowski <ab@euro-linux.com>
 
 userdel -rf sshtest; useradd sshtest && echo sshtest | passwd --stdin sshtest
-
+# EuroLinux hotfix for EL6
+if [ $el_ver == '6' ]; then
+    service sshd restart
+    sleep 5
+fi
+#
 # Create a test file
 touch /home/sshtest/ssh_test_file
 

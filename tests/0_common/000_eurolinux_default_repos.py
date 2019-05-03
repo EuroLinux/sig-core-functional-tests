@@ -18,6 +18,7 @@ el_repos = ['el-server-7-x86_64-qa','el-server-7-x86_64','el-updates','el-base']
 el_repos += sum([['el-server-%d-x86_64' % i, 'el-server-%d-x86_64-qa' % i ] for i in (6,7)], [])
 print el_repos
 now = lambda: datetime.datetime.today().strftime("%c")
+
 print "[+] %s -> Check if non default repo is enabled" % now() 
 for repo in yb.repos.listEnabled():
     if not repo.id in el_repos:
