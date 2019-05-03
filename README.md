@@ -18,6 +18,6 @@ git add .
 git commit -m 'Pulled from upstream'
 git push origin master
 # Additionally the following should be made
-grep 'centos_ver' -R . # check if there are any files that has centos_ver
+grep 'el_ver' -R . # check if there are any files that has el_ver
 ./debrand.sh
 ```
