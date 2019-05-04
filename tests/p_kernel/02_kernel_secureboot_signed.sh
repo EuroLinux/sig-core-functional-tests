@@ -8,7 +8,7 @@ if [[ "$el_ver" = "7" && "$arch" = "x86_64" ]] ; then
   for kernel in $(rpm -q kernel --queryformat '%{version}-%{release}.%{arch}\n') 
     do
     t_Log "Validating kernel $kernel ..."
-    pesign --show-signature --in /boot/vmlinuz-${kernel}|egrep -q 'Red Hat Inc.|CentOS Secure Boot \(key 1\)'
+    pesign --show-signature --in /boot/vmlinuz-${kernel}| egrep -q 'Fermi National|EuroLinux'
     t_CheckExitStatus $?
   done
 else
