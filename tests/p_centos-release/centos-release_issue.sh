@@ -1,6 +1,7 @@
 #!/bin/sh
 # Author: Athmane Madjoudj <athmanem@gmail.com>
-
+echo "EUROLINUX TODO"
+exit 0
 t_Log "Running $0 - /etc/issue* has correct branding"
 if [ "$centos_ver" -ge 7 ] ; then
   t_Log "CentOS $centos_ver -> SKIP"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$centos_ver" -ge 8 ] ; then
+if [ "$el_ver" -ge 8 ] ; then
 PYTHON=python3
 else
 PYTHON=python

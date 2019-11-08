@@ -2,8 +2,8 @@
 
 t_Log "Running $0 - Yum configuration has the correct distroverpkg value test."
 
-if [ "$centos_ver" -ge "8" ] ; then
-   t_Log "CentOS$ver, SKIP"
+if [ "$el_ver" -ge "8" ] ; then
+   t_Log "EuroLinux $el_ver, SKIP"
    exit 0
 fi
 #add centos-userland-release for armhfp

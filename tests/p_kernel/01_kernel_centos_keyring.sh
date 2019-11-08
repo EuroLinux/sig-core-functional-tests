@@ -13,37 +13,4 @@ if [ "$uname_arch" == "aarch64" ] || [ "$uname_arch" == "armv7l" ] || [ "$uname_
   t_Log "*** Not testing on Arch: $uname_arch ***"
   exit 0
 fi
-
-<<<<<<< HEAD
-if [ "$el_ver" = "7" ] ; then
-  for id in kpatch "Driver update" kernel
-  do
-#    t_Log "Verifying x.509 CentOS ${id}"
-#    keyctl list %:.system_keyring | grep -i "CentOS Linux ${id} signing key" > /dev/null 2>&1
-#    t_CheckExitStatus $?
-    echo "SKIP TODO"
-=======
-if [ "$centos_ver" -ge 7 ] ; then
-  if [ "$centos_ver" -eq 7 ];then
-    if [ "$uname_arch" == "ppc64le" -a "$uname_kernel" == "4.18.0" ];then
-      # power9 with c8 kernel
-      ring=.builtin_trusted_keys
-    else
-      ring=.system_keyring
-    fi
-  else
-    ring=.builtin_trusted_keys
-  fi
-  for id in kpatch "Driver update" kernel
-  do
-    t_Log "Verifying x.509 CentOS ${id}"
-    keyctl list %:$ring | grep -i "CentOS Linux ${id} signing key" > /dev/null 2>&1
-    t_CheckExitStatus $?
->>>>>>> 91ec2259bdd19c2a1a3261e92d1c3df08fd6b6ce
-  done
-else
-#  grep 'User ID: CentOS (Kernel Module GPG key)' /var/log/dmesg > /dev/null 2>&1
-   echo "SKIP TODO"
-  t_CheckExitStatus $?
-fi
-
+echo "TODO FIX THIS TEST ON EL8"

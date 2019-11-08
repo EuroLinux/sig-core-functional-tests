@@ -14,7 +14,7 @@ WSGIScriptAlias /tfapp /var/www/html/tf_app.wsgi
 EOF
 
 
-if [ $centos_ver -ge 8 ]
+if [ $el_ver -ge 8 ]
 then
 outputformat=b
 fi

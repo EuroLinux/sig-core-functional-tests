@@ -16,7 +16,7 @@ t_CheckExitStatus $?
 
 t_Log "Check multifile invocation"
 
-if [ $centos_ver -ge 8 ]
+if [ $el_ver -ge 8 ]
 then
 expect << EOF &>/dev/null
 spawn zmore $TESTFILE $TESTFILE

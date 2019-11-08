@@ -2,8 +2,8 @@
 
 # Author: Lz <Lz843723683@163.com>
 
-if [ "$centos_ver" -ne "7" ];then
-        t_Log "Package not included in CentOS $centos_ver => SKIP"
+if [ "$el_ver" -ne "7" ];then
+        t_Log "Package not included in EuroLinux $el_ver => SKIP"
         exit 0
 fi
 

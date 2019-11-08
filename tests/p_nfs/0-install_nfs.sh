@@ -10,7 +10,7 @@ else
    t_ServiceControl rpcbind restart
 fi
 
-if [ "$centos_ver" -ge 8 ] ; then
+if [ "$el_ver" -ge 8 ] ; then
 t_ServiceControl nfs-server start
 else
 # Restart because usualy NFS is enabled by default on CentOS-5

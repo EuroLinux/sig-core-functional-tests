@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - test python-iniparse"
 
-if [ "$centos_ver" -ge 8 ] ; then
+if [ "$el_ver" -ge 8 ] ; then
 PYTHON=python3
 else
 PYTHON=python

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 keytypes="rsa"
-if [ "$centos_ver" -lt 8 ] ; then
-keytypes="$keytypes dsa"
+if [ "$el_ver" -lt 8 ] ; then
+    keytypes="$keytypes dsa"
 fi
 
 for KeyType in $keytypes; do

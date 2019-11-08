@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - check that spamassassin can detect spam."
 
-if [ "$centos_ver" -lt 8 ] ; then
+if [ "$el_ver" -lt 8 ] ; then
 VERSION=-`t_GetPkgVer spamassassin`
 fi
 spamassassin --lint &&\

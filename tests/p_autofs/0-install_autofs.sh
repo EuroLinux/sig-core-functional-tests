@@ -16,7 +16,7 @@ echo '/var/lib/ 127.0.0.1(ro)' >> /etc/exports
 if [ "$el_ver" = "5" ] ; then
    t_ServiceControl portmap restart
    t_ServiceControl nfs restart
-elif [ "$centos_ver" -ge 8 ] ; then
+elif [ "$el_ver" -ge 8 ] ; then
    t_ServiceControl rpcbind restart
    t_ServiceControl nfs-server restart
 else

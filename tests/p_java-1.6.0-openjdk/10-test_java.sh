@@ -1,8 +1,8 @@
 #!/bin/sh
 # Author: Christoph Galuschka <christoph.galuschka@chello.at>
 
-if [ $centos_ver -ge 8 ]; then
-  echo "Package not included in CentOS $centos_ver, skipping"
+if [ $el_ver -ge 8 ]; then
+  echo "Package not included in EuroLinux $el_ver, skipping"
   exit 0
 fi
 if (t_GetArch | grep -qE 'aarch64|ppc64le')
@@ -11,7 +11,7 @@ if (t_GetArch | grep -qE 'aarch64|ppc64le')
   exit 0
 fi
 
-t_Log "Running $0 - javac can compile and java can print 'hello centos'"
+t_Log "Running $0 - javac can compile and java can print 'hello eurolinux'"
 
 # selecting the right alternative
 t_Select_Alternative java jre-1.6.0-openjdk
@@ -26,7 +26,7 @@ cat > $FILE2 <<EOF
 public class HelloWorld {
 
   public static void main(String[] args) {
-    System.out.println("hello centos");
+    System.out.println("hello eurolinux");
   }
 }
 EOF
@@ -42,7 +42,7 @@ fi
 # executing java
 workpath=$(pwd)
 cd $PATH2FILE
-java $FILE |grep -q 'hello centos'
+java $FILE |grep -q 'hello eurolinux'
 
 t_CheckExitStatus $?
 

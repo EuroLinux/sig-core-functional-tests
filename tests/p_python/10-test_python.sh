@@ -4,7 +4,7 @@
 
 t_Log "Running $0 - python can print Hello World"
 
-if [ "$centos_ver" -ge 8 ] ; then
+if [ "$el_ver" -ge 8 ] ; then
 PYTHON=python3
 else
 PYTHON=python
