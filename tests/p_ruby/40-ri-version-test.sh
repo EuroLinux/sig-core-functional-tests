@@ -8,7 +8,14 @@
 t_Log "Running $0 - Check version of ruby ri."
 
 #allready prepared just in case versions should change between C5 and C6
+<<<<<<< HEAD
 if [ "$el_ver" = "7" ] ; then
+=======
+if [ "$centos_ver" = "8" ] ; then
+  ri -v | grep -q '6.0'
+  ret_val=$?
+elif [ "$centos_ver" = "7" ] ; then
+>>>>>>> 91ec2259bdd19c2a1a3261e92d1c3df08fd6b6ce
   ri -v | grep -q '4.0'
   ret_val=$?
 else

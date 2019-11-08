@@ -3,8 +3,13 @@
 
 t_Log "Running $0 - gcc-gnat can build a hello.adb"
 
+<<<<<<< HEAD
 if [ "$el_ver" -lt 7 ] ; then
   t_Log "EuroLinux $el_ver -> SKIP"
+=======
+if [ "$centos_ver" -ne 7 ] ; then
+  t_Log "CentOS $centos_ver -> SKIP"
+>>>>>>> 91ec2259bdd19c2a1a3261e92d1c3df08fd6b6ce
   exit 0
 fi
 

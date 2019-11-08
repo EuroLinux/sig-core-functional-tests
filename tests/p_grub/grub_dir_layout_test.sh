@@ -5,8 +5,13 @@
 
 t_Log "Running $0 -  check that grub file layout is the same with upstream."
 
+<<<<<<< HEAD
 if [ "$el_ver" = "7" ] ; then
   t_Log "el7 comes with grub2, skipping grub test ..."
+=======
+if [ "$centos_ver" -ge 7 ] ; then
+  t_Log "el$centos_ver comes with grub2, skipping grub test ..."
+>>>>>>> 91ec2259bdd19c2a1a3261e92d1c3df08fd6b6ce
   t_CheckExitStatus 0
   exit 0
 fi

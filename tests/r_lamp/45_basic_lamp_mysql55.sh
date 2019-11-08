@@ -12,6 +12,8 @@ if [ $el_ver = 5 ]
 then
   t_ServiceControl mysqld stop
   t_ServiceControl mysql55-mysqld start
+else
+  exit 0
 fi
 t_ServiceControl httpd restart
 

@@ -3,6 +3,7 @@
 
 t_Log "Running $0 - MySQL GRANT privileges test"
 
+<<<<<<< HEAD
 if [ $el_ver -gt 6 ]
 then
   t_Log 'mysql is only supported on C5 and C6, skipping'
@@ -10,6 +11,8 @@ then
   exit 0
 fi
 
+=======
+>>>>>>> 91ec2259bdd19c2a1a3261e92d1c3df08fd6b6ce
 mysql -u root -e 'create database mysql_test;'  > /dev/null 2>&1
 mysql -u root -e "grant all on mysql_test.* to mysql_test@localhost identified by 'mysqltest'"  > /dev/null 2>&1
 mysql -u root -e "flush privileges;" > /dev/null 2>&1
