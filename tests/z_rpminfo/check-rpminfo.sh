@@ -7,7 +7,7 @@ if [ "$el_ver" -eq "8" ]; then
   exit 0
 fi
 
-if [[ $el_ver != 5 ]] 
+if [[ $el_ver != 5 ]]; then
     python "$(dirname "$(readlink -f "$0")")/check-rpminfo.py"
     t_CheckExitStatus $?
 else

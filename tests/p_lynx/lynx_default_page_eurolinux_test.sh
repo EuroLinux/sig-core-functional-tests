@@ -1,10 +1,14 @@
 #!/bin/sh
 # Author: Athmane Madjoudj <athmanem@gmail.com>
 
-if [[ $el_ver -eq '6' ]]; then
-    t_Log "Skipping $0 - check that lynx default page is EuroLinux welcome page ."
-else
-    t_Log "Running $0 - check that lynx default page is EuroLinux welcome page ."
-    lynx -dump  | grep "Welcome to EuroLinux"  >/dev/null 2>&1
+t_Log "Running $0 - check that lynx default page is EuroLinux welcome page ."
+
+if [ "$el_ver" -eq "8" ]; then
+  t_Log "Package lynx not available in default repos on el8 => SKIP"
+  exit 0
 fi
+
+
+lynx -dump  | grep "EuroLinux"  >/dev/null 2>&1
+
 t_CheckExitStatus $?
