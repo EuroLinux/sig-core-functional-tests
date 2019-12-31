@@ -8,14 +8,8 @@ if [ "$el_ver" -eq "8" ]; then
   exit 0
 fi
 
-
-if [ "$SKIP_QA_HARNESS" = "1" ] ; then
-  URL="http://mirror.centos.org/"
-  CHECK_FOR="CentOS on the Web"
-else
-  URL="http://repo.centos.qa/qa/"
-  CHECK_FOR="ks_cfg"
-fi
+URL="https://euro-linux.com"
+CHECK_FOR="EuroLinux"
 
 lynx -dump ${URL} | grep "${CHECK_FOR}"  >/dev/null 2>&1
 
