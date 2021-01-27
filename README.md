@@ -6,8 +6,8 @@ See the doc directory for additional information on test writing.
 
 | EuroLinux Version/Architecture | Build Status |
 | --------------------------- | ------------ |
-| EuroLinux 7 - x86_64           | [![Build Status](https://10.10.1.139/view/EL-QA/job/EL-QA-sig-core-t_functional-el7/badge/icon)](https://jenkins.bel.lan/view/EL-QA/job/EL-QA-sig-core-t_functional-el7/) |
-| EuroLinux 6 - x86_64           | [![Build Status](https://10.10.1.139/view/EL-QA/job/EL-QA-sig-core-t_functional-el6/badge/icon)](https://jenkins.bel.lan/view/EL-QA/job/EL-QA-sig-core-t_functional-el6/) |
+| EuroLinux 7 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=EL-QA-sig-core-t_functional-el7)](https://jenkins.eurolinux.local/job/EL-QA-sig-core-t_functional-el7/) |
+| EuroLinux 6 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=EL-QA-sig-core-t_functional-el6)](https://jenkins.eurolinux.local/job/EL-QA-sig-core-t_functional-el6/) |
 
 ## Pulling from upstream
 ```bash
@@ -32,6 +32,18 @@ To only run a specific test ( eg. p_openssh ) :
 ```
 ./runtests.sh p_openssh
 ```
+
+## Checking test scripts
+
+Best way of checking if tests are correct is to run them on eurolinux 6 and 7 vagrant boxes in conjunction with [el_buildtools/qa](https://git.bel.lan/tools/el-buildtools/-/tree/master/qa) scripts.  
+Simply:
+```
+git clone git@git.bel.lan:tools/el-buildtools.git --recurse-submodules
+cd el-buildtools/qa
+export PROFILE=<el6|el7>
+./run_vagrant.sh sig-core-t_functional/eurolinux_ci_build.sh
+```
+exactly the same process is used on jenkins.
 ## Writing tests
 
 There is a dedicated [wiki page](http://wiki.centos.org/QaWiki/AutomatedTests/WritingTests/t_functional) covering that. As a newcomer, you should read this document from start to finish. 
