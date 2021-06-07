@@ -1,13 +1,13 @@
 #!/bin/sh
 # Author: Christoph Galuschka <tigalch@tigalch.org>
-# Author: Alex Baranowski
+# Author: Alex Baranowski <ab@euro-linux.com>
 
 t_Log "Running $0 - Create PDF from postscript from text, and convert PDF back to text and check contents"
 
-if [ "$el_ver" = "7" ] ;then
-  FILE=/etc/el-release
-else
+if [ "$el_ver" = "5" ] ;then
   FILE=/etc/redhat-release
+else
+  FILE=/etc/el-release
 fi
 FIND='EuroLinux'
 PS_FILE=/var/tmp/test.ps

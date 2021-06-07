@@ -5,7 +5,7 @@
 t_Log "Running $0 - installing git"
 
 # Install git
-if [ $el_ver == '6' ]
+if [ $el_ver -ge 6 ]
   then
   t_InstallPackage git
 else

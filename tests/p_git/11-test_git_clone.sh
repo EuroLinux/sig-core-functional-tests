@@ -5,11 +5,11 @@
 
 t_Log "Running $0 - testing a local git clone operation"
 
-if [ $el_ver == '6' ]
+if [ $el_ver -ge 6 ]
   then
   # Testing Git clone by comparing SHAs
   workpath=$(pwd)
-  rm -rf /tmp/temprepo/ /tmp/cloned_repo/ /tmp/testing_clone_repo
+  rm -rf /tmp/temprepo/ /tmp/cloned_repo/ /tmp/testing_clone_repo  
   temp_repo="/tmp/temprepo"
   SHA1=`echo "hello world" | git hash-object --stdin`
   mkdir -p $temp_repo

@@ -9,4 +9,3 @@ if [ "$el_ver" -eq "8" ]; then
 fi
 
 t_InstallPackage  lynx
-

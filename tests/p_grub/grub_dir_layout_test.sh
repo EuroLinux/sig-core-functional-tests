@@ -5,8 +5,8 @@
 
 t_Log "Running $0 -  check that grub file layout is the same with upstream."
 
-if [ "$el_ver" -ge "7" ] ; then
-  t_Log "el7 comes with grub2, skipping grub test ..."
+if [ "$el_ver" -ge 7 ] ; then
+  t_Log "el$el_ver comes with grub2, skipping grub test ..."
   t_CheckExitStatus 0
   exit 0
 fi

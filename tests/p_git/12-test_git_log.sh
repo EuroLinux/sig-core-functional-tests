@@ -5,11 +5,11 @@
 
 t_Log "Running $0 - testing git logging and commit messages"
 
-if [ $el_ver == '6' ]
+if [ $el_ver -ge 6 ]
   then
   # Testing git log and git commit msgs
   workpath=$(pwd)
-  rm -rf /tmp/temprepo/ /tmp/cloned_repo/
+  rm -rf /tmp/temprepo/ /tmp/cloned_repo/ 
   temp_repo="/tmp/temprepo"
   mkdir -p $temp_repo
   cd $temp_repo

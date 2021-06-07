@@ -8,4 +8,3 @@ fi
 
 t_Log "$0 - installing valac"
 t_InstallPackage vala
-

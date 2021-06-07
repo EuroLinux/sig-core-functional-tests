@@ -15,4 +15,3 @@ else
     cat $selinux_file | grep 1  > /dev/null 2>&1
     t_CheckExitStatus $?
 fi
-

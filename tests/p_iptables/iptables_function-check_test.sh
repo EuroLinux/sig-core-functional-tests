@@ -43,4 +43,3 @@ fi
 /etc/init.d/iptables restart > /dev/null
 
 t_CheckExitStatus $ret_val
-

@@ -15,4 +15,3 @@ else
   t_Log "previous versions than EuroLinux 7 - or not x86_64 -aren't using secureboot ... skipping"
   exit 0
 fi
-

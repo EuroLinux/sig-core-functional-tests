@@ -44,4 +44,3 @@ else
   t_Log "iptraf failed to log any traffic?!. That ain't good..."
   t_CheckExitStatus 1
 fi
-

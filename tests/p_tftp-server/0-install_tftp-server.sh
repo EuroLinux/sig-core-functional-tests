@@ -4,7 +4,7 @@
 t_InstallPackage tftp-server xinetd tftp
 
 # Enable tftp
-if [ "$el_ver" -ge "8" ] ; then
+if [[ "$el_ver" -ge "8" ]] ; then
 cat <<__EOF__ >/etc/xinetd.d/tftp
 service tftp
 {

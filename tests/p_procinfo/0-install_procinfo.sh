@@ -6,7 +6,7 @@
 t_Log "Running $0 - attempting to install procinfo"
 
 if [ "$el_ver" -gt "5" ] ; then
-   t_Log "It seems to be a CentOS $el_ver system, this test will be disabled -> SKIP"
+   t_Log "It seems to be a EuroLinux $el_ver system, this test will be disabled -> SKIP"
    exit 0
 else
    # ProcInfo Utility Package

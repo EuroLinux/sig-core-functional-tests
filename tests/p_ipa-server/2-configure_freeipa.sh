@@ -41,4 +41,3 @@ if (t_GetPkgRel basesystem | grep -qE 'el(6|7)') && !(t_GetArch | grep -qE 'aarc
 else
   echo "Skipped on CentOS 5 and AArch64"
 fi
-

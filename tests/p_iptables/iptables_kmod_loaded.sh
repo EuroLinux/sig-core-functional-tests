@@ -12,4 +12,3 @@ fi
 lsmod | grep "ip_tables" > /dev/null 2>&1
 
 t_CheckExitStatus $?
-

@@ -1,9 +1,8 @@
 #!/bin/bash
 # Author: Athmane Madjoudj <athmanem@gmail.com>
-# Author: Alex Baranowski
 
 if [ "$el_ver" -eq "8" ] ; then
-  t_Log "Tomcat is not available in CentOS ${el_ver}. SKIP"
+  t_Log "Tomcat is not available in EuroLinux $el_ver. SKIP"
   exit 0
 fi
 yum -y remove java\*
