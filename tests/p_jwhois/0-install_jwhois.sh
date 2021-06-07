@@ -14,4 +14,3 @@ else
 fi
 
 t_InstallPackage $whois_pkg nc
-

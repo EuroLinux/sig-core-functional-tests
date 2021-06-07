@@ -10,5 +10,5 @@ if [ $el_ver -eq 7 ];  then
   t_InstallPackage gcc-gnat
   t_Log "This test is only valid in EuroLinux 7"
 else
-  t_Log "This test is only valid in CentOS7."
+  t_Log "This test is only valid in EuroLinux 7."
 fi

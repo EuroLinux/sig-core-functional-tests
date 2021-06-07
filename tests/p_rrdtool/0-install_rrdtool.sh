@@ -9,4 +9,3 @@ then
 else 
     echo "Skipped on CentOS 5"
 fi
-

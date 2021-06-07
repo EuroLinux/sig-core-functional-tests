@@ -4,7 +4,7 @@
 t_Log "Running $0 - initscripts CentOS branding "
 
 if [ "$el_ver" -gt "5" ] ; then
-  t_Log "Test not required for CentOS $el_ver -> SKIP"
+  t_Log "Test not required for EuroLinux $el_ver -> SKIP"
   exit 0
 else
   grep "CentOS" /etc/rc.sysinit > /dev/null 2>&1

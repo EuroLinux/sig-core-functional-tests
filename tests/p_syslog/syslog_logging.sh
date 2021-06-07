@@ -15,4 +15,3 @@ fi
 grep "t_functional_logging_test" /var/log/messages > /dev/null 2>&1
 
 t_CheckExitStatus $?
-

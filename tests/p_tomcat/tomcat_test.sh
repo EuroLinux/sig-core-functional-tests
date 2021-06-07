@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Athmane Madjoudj <athmanem@gmail.com>
 
-if [ "$el_ver" -ge "8" ] ; then
+if [[ "$el_ver" -ge "8" ]] ; then
    exit 0
 fi
 uname_arch=$(uname -m)

@@ -14,11 +14,11 @@ fi
 FILE='/var/tmp/python-test.py'
 
 cat > $FILE <<EOF
-print ("hello centos")
+print ("hello eurolinux")
 EOF
 
 # Executing python
-$PYTHON $FILE | grep -q "hello centos"
+$PYTHON $FILE | grep -q "hello eurolinux"
 
 t_CheckExitStatus $?
 

@@ -5,6 +5,11 @@ export qa_releasever=$( cat /etc/system-release | grep -o "[0-9].[0-9]*" )
 export qa_dist=$(echo $qa_releasever | cut -f1 -d.)
 t_Log "Running $0 - Yum configuration has the correct releasever"
 
+if [[ "$el_ver" -ge "8" ]] ; then
+   t_Log "EuroLinux $ver, SKIP"
+   exit 0
+fi
+
 real_release_ver=$(python -c 'import yum, pprint; yb = yum.YumBase();print yb.conf.yumvar["releasever"]' | tail -1)
 
 echo "QA_DIST $qa_dist"

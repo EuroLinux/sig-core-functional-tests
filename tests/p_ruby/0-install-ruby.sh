@@ -10,4 +10,3 @@ if [ "$el_ver" -ge 8 ] ; then
 else
     t_InstallPackage ruby ruby-irb ruby-ri ruby-rdoc
 fi
-

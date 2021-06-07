@@ -15,6 +15,8 @@ elif [ "$el_ver" = "6" ] ; then
 #    grep -q "RPM-GPG-KEY-eurolinux" /etc/abrt/gpg_keys
 elif [ "$el_ver" = "5" ] ; then
     echo "Skipped on EuroLinux 5"
+elif [ "$el_ver" = "8" ] ; then
+    ls /etc/pki/rpm-gpg/ | grep -q "RPM-GPG-KEY-eurolinux8"
 else 
     echo "Unrecognized CentOS version - fail!"
     exit 1

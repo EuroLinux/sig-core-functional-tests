@@ -28,5 +28,4 @@ correct_vagrant
 sudo yum -y update
 uname -a
 export LANG=en_US.UTF-8
-#sudo SKIP_QA_HARNESS=1 ./runtests.sh
-sudo ./runtests.sh
+sudo SKIP_QA_HARNESS=1 ./runtests.sh

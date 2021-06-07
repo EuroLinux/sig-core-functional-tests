@@ -35,4 +35,3 @@ else
   grep 'User ID: CentOS (Kernel Module GPG key)' /var/log/dmesg > /dev/null 2>&1
   t_CheckExitStatus $?
 fi
-
