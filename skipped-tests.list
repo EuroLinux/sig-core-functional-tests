@@ -9,6 +9,5 @@
 8|tests/p_diffutils/10-cmp-tests|https://bugzilla.redhat.com/show_bug.cgi?id=1732960
 
 #EuroLinux
-8|tests/p_httpd/httpd_eurolinux_brand_welcome.sh|https://app.clickup.com/t/kzag0a
 8|tests/p_kernel/02_kernel_secureboot_signed.sh|https://app.clickup.com/t/kzb4wy
 
