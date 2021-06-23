@@ -5,7 +5,7 @@ t_Log "Running $0 - EuroLinux Anaconda patch is applied test."
 
 uname_arch=$(uname -m)
 #TODO testy anakondy dla EuroLinux'a 8
-if [ "$el_ver" -eq "8" ]; then
+if [[ "$el_ver" -eq "8" ]]; then
   t_Log "el8 => SKIPPING"
   exit 0
 fi
