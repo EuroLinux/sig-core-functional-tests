@@ -8,6 +8,12 @@ if [ "$el_ver" -ne "8" ]; then
     exit 0
 fi
 
+t_Log "Remove php before installing nginx for compatybility resons"
+
+sudo yum remove @php -y
+sudo yum module reset php -y
+
+
 t_InstallPackage curl 
 
 streams=$(dnf module list nginx -q | grep "nginx" | awk '{print $2}' | sort -u)
