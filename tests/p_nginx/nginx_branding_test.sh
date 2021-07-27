@@ -13,8 +13,11 @@ t_Log "Remove php before installing nginx for compatybility resons"
 sudo yum remove @php -y
 sudo yum module reset php -y
 
+t_InstallPackage curl
 
-t_InstallPackage curl 
+t_Log "Remove php module."
+sudo yum module remove php -y
+sudo yum module reset php -y
 
 streams=$(dnf module list nginx -q | grep "nginx" | awk '{print $2}' | sort -u)
 
