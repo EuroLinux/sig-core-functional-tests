@@ -16,3 +16,7 @@ t_InstallPackage ipa-server
 t_Log "Check if el-logos is present after ipa installation"
 sudo yum list installed | grep -q el-logos
 t_CheckExitStatus $?
+
+t_Log "Remove ipa."
+sudo yum remove ipa-server -y
+
