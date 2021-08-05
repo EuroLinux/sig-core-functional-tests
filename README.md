@@ -6,6 +6,7 @@ See the doc directory for additional information on test writing.
 
 | EuroLinux Version/Architecture | Build Status |
 | --------------------------- | ------------ |
+| EuroLinux 8 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=el8-qa-pre%2Fmaster&config=sig_core-tests)](https://jenkins.eurolinux.local/job/el8-qa-pre/job/master/) |
 | EuroLinux 7 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=EL-QA-sig-core-t_functional-el7)](https://jenkins.eurolinux.local/job/EL-QA-sig-core-t_functional-el7/) |
 | EuroLinux 6 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=EL-QA-sig-core-t_functional-el6)](https://jenkins.eurolinux.local/job/EL-QA-sig-core-t_functional-el6/) |
 

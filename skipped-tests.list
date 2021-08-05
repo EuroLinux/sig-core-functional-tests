@@ -10,4 +10,4 @@
 
 #EuroLinux
 8|tests/p_kernel/02_kernel_secureboot_signed.sh|https://app.clickup.com/t/kzb4wy
-
+8|tests/p_spamassassin/*|https://app.clickup.com/t/rg9518
