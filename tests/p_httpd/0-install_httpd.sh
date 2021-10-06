@@ -3,7 +3,7 @@
 #	  Christoph Galuschka <tigalch@tigalch.org>
 
 php_mysql="php-mysql"
-if [ $centos_ver -ge 7 ]
+if [ $el_ver -ge 7 ]
 then
   php_mysql="php-mysqlnd"
 fi

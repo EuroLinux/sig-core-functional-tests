@@ -1,21 +1,23 @@
 #!/bin/bash
 
-# Author: Steve Barnes (steve@echo.id.au)
+# Authors: Steve Barnes (steve@echo.id.au)
 #	  Christoph Galuschka <tigalch@tigalch.org>
+#     Alex Baranowski <ab@euro-linux.com>
 # Filename: 1_lamp_check.sh
 # Version: 0.2
+
 # Last Updated: Saturday, 09 November 2013 2:23
 # Description: A simple Bash script to start LAMP daemons (httpd, mysqld), and confirm PHP is working.
 
 # starting with 5.10, we have to differ between mysql55 and mysql
 
-if [ "$centos_ver" -ge 7 ] ; then
-  t_Log "no mysql55 on CentOS 7 ... SKIP"
+if [ "$el_ver" -ge 7 ] ; then
+  t_Log "no mysql55 on EuroLinux 7+ ... SKIP"
   exit 0
 fi
 
 
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
 then
   readonly DAEMONS=( httpd mysql55-mysqld )
 else

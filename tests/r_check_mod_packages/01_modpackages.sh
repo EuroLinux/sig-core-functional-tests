@@ -9,15 +9,14 @@ if [ $SKIP_QA_HARNESS -eq 1 ] && [ "$PRE_UPDATES" != "1" ] ; then
     ret_val=0
 else
   ret_val=0
-  if [ "$centos_ver" = "7" ] ; then
-
+  if [ "$el_ver" = "7" ] ; then
    t_Log "Running $0 - Checking current repositories for .el7.centos on modified files"
    uname_arch=$(uname -m)
    yum clean all
     for pkg in $(cat tests/r_check_mod_packages/c72-mod-packages.lst.$uname_arch|grep -v '^#')
       do
          has_centos=$(yum list $pkg | grep '.el7.centos')
-         if [ "$has_centos" == "" ]; then 
+         if [ "$has_centos" == "" ]; then
            echo $pkg missing .el7.centos
            ret_val=1
          fi

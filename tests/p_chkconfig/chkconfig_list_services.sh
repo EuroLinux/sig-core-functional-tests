@@ -4,8 +4,8 @@
 
 t_Log "Running $0 - check if chkconfig can list a service status"
 
-if [ $centos_ver -ge 8 ]; then
-  echo "CentOS $centos_ver does not use chkconfig, skipping"
+if [ $el_ver -ge 8 ]; then
+  echo "EuroLinux $el_ver does not use chkconfig, skipping"
   exit 0
 fi
 

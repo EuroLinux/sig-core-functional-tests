@@ -70,15 +70,15 @@ function t_ResetModule
 function t_Process
 {
 	exec 7< $@
-	
+
 	while read -u 7 f
 	do
 		# skip files named readme or those that start with an _
 		[[ "$(basename ${f})" =~ readme|^_ ]] &&  continue;
-		
+
 		# handy tip: chmod -x to disable individual test scripts.
 		[ -x ${f} ] && ${f}
-			
+
 	done
 
 	return 0
@@ -90,14 +90,14 @@ function t_Process
 function t_CheckDeps
 {
 	# TODO
-	
+
 	# success, all packages are installed
 	return 0
 }
 
 # Description: perform a service control and sleep for a few seconds to let
-#   the dust settle. Using this function avoids a race condition wherein 
-#   subsequent tests execute (and typically fail) before a service has had a 
+#   the dust settle. Using this function avoids a race condition wherein
+#   subsequent tests execute (and typically fail) before a service has had a
 #   chance to fully start/open a network port etc.
 # Call it with cycle instead of start, and it will stop+start
 #   handy, if you dont know the service might already be running
@@ -118,7 +118,7 @@ function t_ServiceControl
 # Description: Get a package (rpm) release number
 function t_GetPkgRel
 {
-       rpm -q --queryformat '%{RELEASE}' $1 
+       rpm -q --queryformat '%{RELEASE}' $1
 }
 
 # Description: return the distro release (returns 5 or 6 now)
@@ -126,8 +126,8 @@ function t_DistCheck
 {
 	rpm -q $(rpm -qf /etc/redhat-release) --queryformat '%{version}\n'|cut -f 1 -d '.'
 }
-# Additionally set distro release to $centos_ver
-centos_ver=$(t_DistCheck)
+# Additionally set distro release to $el_ver
+el_ver=$(t_DistCheck)
 
 # Description: test if we are using CentOS Stream
 function t_StreamCheck
@@ -180,10 +180,10 @@ function t_SkipReleaseGreaterThan {
 # Description: Get a package (rpm) version number
 function t_GetPkgVer
 {
-       rpm -q --queryformat '%{version}' $1 
+       rpm -q --queryformat '%{version}' $1
 }
 
-# Description: get the arch 
+# Description: get the arch
 function t_GetArch
 {
 	rpm -q $(rpm -qf /etc/redhat-release) --queryformat '%{arch}\n'
@@ -214,7 +214,7 @@ function t_Assert
 
 function t_Assert_Equals
 {
- [ $1 -eq $2 ] 
+ [ $1 -eq $2 ]
  t_CheckExitStatus $?
 }
 function t_Select_Alternative
@@ -251,6 +251,5 @@ export -f t_CheckForPort
 export -f t_Assert
 export -f t_Assert_Equals
 export -f t_Select_Alternative
-export centos_ver
-export centos_stream
+export el_ver
 export arch

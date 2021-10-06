@@ -29,7 +29,7 @@ logdir "/amanda/state/log"
 indexdir "/amanda/state/index"
 EOF
 
-if [ $centos_ver == 5 ]
+if [ $el_ver == 5 ]
 then
   echo 'dumpuser "amanda"' >> /etc/amanda/MyConfig/amanda.conf
 else
@@ -41,7 +41,7 @@ tpchanger "chg-disk:/amanda/vtapes"
 labelstr "MyData[0-9][0-9]"
 EOF
 
-if [ $centos_ver -gt 6 ]
+if [ $el_ver -gt 6 ]
 then
   echo 'autolabel "MyData%%"' >> /etc/amanda/MyConfig/amanda.conf
 else

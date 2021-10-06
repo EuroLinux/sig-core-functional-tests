@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - exim can accept and deliver local email."
 
-if [ $centos_ver == '5' ]
+if [ $el_ver == '5' ]
   then
   ret_val=1
 

@@ -6,7 +6,7 @@
 
 t_Log "Running $0 - checking git installation"
 
-if [ $centos_ver -ge 6 ]
+if [ $el_ver -ge 6 ]
   then
   git --version
   ret_val=$?

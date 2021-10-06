@@ -2,12 +2,19 @@
 
 t_Log "Running $0 - package should already be installed"
 
-if [ "$centos_ver" -eq "8" ] ; then
+if [ "$el_ver" -eq "8" ] ; then
  t_Log "yum is replaced by dnf on el8. SKIP"
+ exit 0
+fi
+
+# TODO
+if [ "$el_ver" -eq "7" ] ; then
+ t_Log "EuroLinux TODO. SKIP"
  exit 0
 fi
 rpm -qa | egrep -q 'yum-.*fastestmirror'
 t_CheckExitStatus $?
+
 
 t_Log "Running $0 - yum should have a hard Requires on yum-plugin-fastestmirror"
 rpm -q --requires yum | egrep -q 'yum-.*fastestmirror'

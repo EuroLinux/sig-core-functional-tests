@@ -4,7 +4,7 @@
 
 t_Log "Running $0 - checking if file can recognize mime executable type "
 
-if [ "$centos_ver" -eq "8" ] ;then
+if [ "$el_ver" -eq "8" ] ;then
   string="application/x-sharedlib"
 else
   string="application/x-executable"

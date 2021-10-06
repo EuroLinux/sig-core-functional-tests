@@ -6,10 +6,10 @@ t_Log "Running $0 - attempting to install LAMP stack."
 
 # MySQL
 # starting with 5.10, we have to differ between mysql55 and mysql
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
 then
   t_InstallPackage mysql-server mysql55-mysql-server httpd php
-elif [ $centos_ver -ge 8 ]
+elif [ $el_ver -ge 8 ]
 then
   t_InstallPackage mariadb-server httpd php
 else

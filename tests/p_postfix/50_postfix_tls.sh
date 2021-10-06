@@ -8,7 +8,7 @@ t_InstallPackage openssl
 
 #creating backups of changed files
 cp -a /etc/postfix/main.cf /etc/postfix/main.cf_testing
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   cp -a /etc/dovecot.conf /etc/dovecot.conf_testing
 else
@@ -19,7 +19,7 @@ fi
 TESTDIR='/var/tmp/openssl-test'
 mkdir $TESTDIR
 t_Log "creating private key"
-if [ $centos_ver = 6 ] 
+if [ $el_ver = 6 ] 
   then
   openssl genpkey -algorithm rsa -out $TESTDIR/server.key.secure -pkeyopt rsa_keygen_bits:2048 > /dev/null 2>&1
 else
@@ -51,7 +51,7 @@ organizationalUnitName_default  = CentOS
 EOF
 
 t_Log "creating server key"
-if [ $centos_ver = 6 ]
+if [ $el_ver = 6 ]
   then
   openssl rsa -in $TESTDIR/server.key.secure -out $TESTDIR/server.key > /dev/null 2>&1
 else
@@ -107,7 +107,7 @@ smtpd_recipient_restrictions =
 EOF
 
 #adding parameters to dovecot
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   cat > /etc/dovecot.conf <<EOF
 protocol imap {
@@ -161,7 +161,7 @@ ret_val=$?
 
 # restoring changed files
 mv -f /etc/postfix/main.cf_testing /etc/postfix/main.cf
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   mv -f /etc/dovecot.conf_testing /etc/dovecot.conf
 else

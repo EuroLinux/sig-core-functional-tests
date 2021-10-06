@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: Christoph Galuschka <tigalch@tigalch.org>
 
-if [ $centos_ver -lt 7 ]
+if [ $el_ver -lt 7 ]
 then
   # Install vconfig
   t_InstallPackage vconfig

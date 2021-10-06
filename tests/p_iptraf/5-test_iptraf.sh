@@ -11,7 +11,7 @@ trap "[ -e ${TMP} ] && { /bin/rm ${TMP}; }" EXIT
 # iptraf only be run by root
 [ ${EUID} -eq 0 ] || { t_Log "Not running as root, skipping this test. Non-fatal."; exit $PASS; }
 
-if [ "$centos_ver" -ge 7 ] ; then
+if [ "$el_ver" -ge 7 ] ; then
  IPTRAF=`which iptraf-ng`
 else
  IPTRAF=`which iptraf`
@@ -44,4 +44,3 @@ else
   t_Log "iptraf failed to log any traffic?!. That ain't good..."
   t_CheckExitStatus 1
 fi
-

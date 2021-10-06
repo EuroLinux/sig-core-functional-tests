@@ -2,8 +2,14 @@
 
 # Ensure plugin is enabled :
 
-if [ "$centos_ver" -eq "8" ] ; then
+if [ "$el_ver" -eq "8" ] ; then
  t_Log "yum is replaced by dnf on el8. SKIP"
+ exit 0
+fi
+
+# TODO
+if [ "$el_ver" -eq "7" ] ; then
+ t_Log "EuroLinux TODO. SKIP"
  exit 0
 fi
 
@@ -15,7 +21,7 @@ fi
 
 isAltArch=$(uname -m|egrep -q 'armv7l|aarch64|ppc64|ppc64le'|| echo 1 && echo 0)
 
-if [ "$isAltArch" = "0" ] && [ $centos_ver -lt 7 ] ; then
+if [ "$isAltArch" = "0" ] && [ $el_ver -lt 7 ] ; then
  t_Log "Skipping for altarch, using only mirror.centos.org"
  t_Log "SKIP"
  exit 0
@@ -26,14 +32,14 @@ grep 'enabled=1' /etc/yum/pluginconf.d/fastestmirror.conf > /dev/null
 t_CheckExitStatus $?
 
 # timedhosts file ends up in different places on c5 and c6
-if [ $centos_ver == 5 ]; then 
+if [ $el_ver == 5 ]; then 
 	BaseDir=/var/cache/yum/
 else
 	BaseArch=`uname -i`
 	if [ "$BaseArch" == "armv7l" ];then
 		BaseArch="armhfp"
 	fi
-	BaseDir=/var/cache/yum/$BaseArch/$centos_ver
+	BaseDir=/var/cache/yum/$BaseArch/$el_ver
 fi
 
 t_Log "Running $0 - Ensure we have mirrorlist enabled."

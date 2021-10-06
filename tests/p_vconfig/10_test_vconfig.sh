@@ -5,7 +5,7 @@
 t_Log "Running $0 - create VLAN IF, assign IP on VLAN IF and tear down VLAN IF test"
 ret_val=0
 
-if [ $centos_ver -gt 6 ]
+if [ $el_ver -gt 6 ]
 then
   t_Log 'vconfig is only supported on C5 and C6, skipping'
   t_CheckExitStatus $ret_val

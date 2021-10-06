@@ -4,8 +4,8 @@
 
 t_Log "Running $0 - iptables functional check - deny ping on loopback"
 
-if [ "$centos_ver" = "7" ] || [ "$centos_ver" = "8" ];then
- t_Log "CentOS $centos_ver uses firewalld and not iptables -> SKIP"
+if [ "$el_ver" = "7" ] || [ "$el_ver" = "8" ];then
+ t_Log "EuroLinux $el_ver uses firewalld and not iptables -> SKIP"
  t_CheckExitStatus 0
  exit 0
 fi
@@ -43,4 +43,3 @@ fi
 /etc/init.d/iptables restart > /dev/null
 
 t_CheckExitStatus $ret_val
-

@@ -6,13 +6,8 @@ t_Log "Running $0 - wget can access http-host and download index.html."
 FILE=/var/tmp/index.html
 
 
-if [ $SKIP_QA_HARNESS -eq 1 ]; then
-  CHECK_FOR="timestamp"
-  URL="http://mirror.centos.org/"
-else
-  CHECK_FOR="CentOS"
-  URL="http://repo.centos.qa/srv/CentOS/"
-fi
+CHECK_FOR="EuroLinux"
+URL="https://euro-linux.com"
 
 t_Log "Querying ${URL}"
 wget -q --output-document=${FILE} ${URL}

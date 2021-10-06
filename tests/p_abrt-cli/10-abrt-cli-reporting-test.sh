@@ -15,7 +15,7 @@ if [ "$?" -ne "0" ];then
 fi
 
 # run only on centos 7 or greater
-[[ $centos_ver -lt 7 ]] && exit 0
+[[ $el_ver -lt 7 ]] && exit 0
 
 
 conf_file="/etc/libreport/events/report_CentOSBugTracker.conf"

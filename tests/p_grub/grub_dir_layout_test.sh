@@ -1,12 +1,12 @@
 #!/bin/sh
 # Author: Athmane Madjoudj <athmanem@gmail.com>
-# Note: This was a known issue in CentOS 6.0
+# Note: This was a known issue in EuroLinux 6.0
 # See: http://bugs.centos.org/view.php?id=4995
 
 t_Log "Running $0 -  check that grub file layout is the same with upstream."
 
-if [ "$centos_ver" -ge 7 ] ; then
-  t_Log "el$centos_ver comes with grub2, skipping grub test ..."
+if [ "$el_ver" -ge 7 ] ; then
+  t_Log "el$el_ver comes with grub2, skipping grub test ..."
   t_CheckExitStatus 0
   exit 0
 fi

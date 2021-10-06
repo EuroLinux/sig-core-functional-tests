@@ -3,12 +3,18 @@
 
 t_Log "Running $0 -  Verifying that shim.efi is correctly signed with correct cert"
 
-if [[ "$centos_ver" = "7" && "$arch" = "x86_64" ]] ; then
+if [[ "$el_ver" = "7" && "$arch" = "x86_64" ]] ; then
   t_InstallPackage pesign shim
-  pesign --show-signature --in /boot/efi/EFI/centos/shim.efi|grep -q 'Microsoft Windows UEFI Driver Publisher'
+  [ -e /boot/efi/EFI/redhat/shim.efi ] && BOOT_EFI="/boot/efi/EFI/redhat/shim.efi"
+  [ -e /boot/efi/EFI/centos/shim.efi ] && BOOT_EFI="/boot/efi/EFI/centos/shim.efi"
+  if [ -z "$BOOT_EFI" ]; then 
+      t_Log "WARNING: Cannot find proper shim.efi !"
+      exit 0
+  fi
+  t_InstallPackage pesign shim
+  pesign --show-signature --in $BOOT_EFI |grep -q 'Microsoft Windows UEFI Driver Publisher'
   t_CheckExitStatus $?
 else
-  t_Log "previous versions than CentOS 7 - or not x86_64 arch - aren't using shim/secureboot ... skipping"
+  t_Log "other versions than CentOS 7 - or not x86_64 arch - aren't using shim/secureboot ... skipping"
   exit 0
 fi
-

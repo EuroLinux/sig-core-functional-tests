@@ -5,7 +5,7 @@
 
 t_Log "Running $0 - testing git logging and commit messages"
 
-if [ $centos_ver -ge 6 ]
+if [ $el_ver -ge 6 ]
   then
   # Testing git log and git commit msgs
   workpath=$(pwd)

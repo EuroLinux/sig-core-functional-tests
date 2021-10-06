@@ -7,7 +7,7 @@ t_Log "Running $0 - curl can access http-host and retrieve index.html."
 
 if [ $SKIP_QA_HARNESS -eq 1 ]; then
   CHECK_FOR="The CentOS Project"
-  URL="http://www.centos.org/"
+  URL="https://www.centos.org/"
 else
   CHECK_FOR="Index of /srv"
   URL="http://repo.centos.qa/srv/CentOS/"

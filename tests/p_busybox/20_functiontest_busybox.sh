@@ -3,7 +3,7 @@
 # Author: Christoph Galuschka <christoph.galuschka@chello.at>
 # Author: Rene Diepstraten <rene@renediepstraten.nl>
 
-[[ $centos_ver -ge 7 ]] && exit
+[[ $el_ver -ge 7 ]] && exit
 
 t_Log "Running $0 - busybox functional tests: busybox provided functions are working."
 

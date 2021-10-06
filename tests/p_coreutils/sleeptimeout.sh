@@ -3,7 +3,7 @@
 
 t_Log "$0 checking timeout and sleep"
 
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   t_Log "This is a C5 system. no 'timeout' available. Skipping." 
   ret_val=0

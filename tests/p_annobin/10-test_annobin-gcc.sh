@@ -2,7 +2,7 @@
 # Author: Neal Gompa <ngompa@datto.com>
 
 # Skip if older than CentOS 8
-if [ "$centos_ver" -lt "8" ]; then
+if [ "$el_ver" -lt "8" ]; then
   t_Log "annobin does not exist pre-c8 => SKIP"
   exit 0
 fi

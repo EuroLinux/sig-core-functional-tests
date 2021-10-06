@@ -3,8 +3,8 @@
 
 t_Log "Running $0 - Webalizer test."
 
-if [ "$centos_ver" -ge 7 ] ; then
- t_Log "No webalizer package for CentOS $centos_ver -> SKIP"
+if [ "$el_ver" -ge 7 ] ; then
+ t_Log "No webalizer package for EuroLinux $el_ver -> SKIP"
  t_CheckExitStatus 0
  exit 0
 fi

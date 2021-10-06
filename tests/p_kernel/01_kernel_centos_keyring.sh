@@ -14,8 +14,8 @@ if [ "$uname_arch" == "aarch64" ] || [ "$uname_arch" == "armv7l" ] || [ "$uname_
   exit 0
 fi
 
-if [ "$centos_ver" -ge 7 ] ; then
-  if [ "$centos_ver" -eq 7 ];then
+if [ "$el_ver" -ge 7 ] ; then
+  if [ "$el_ver" -eq 7 ];then
     if [ "$uname_arch" == "ppc64le" -a "$uname_kernel" == "4.18.0" ];then
       # power9 with c8 kernel
       ring=.builtin_trusted_keys
@@ -35,4 +35,3 @@ else
   grep 'User ID: CentOS (Kernel Module GPG key)' /var/log/dmesg > /dev/null 2>&1
   t_CheckExitStatus $?
 fi
-

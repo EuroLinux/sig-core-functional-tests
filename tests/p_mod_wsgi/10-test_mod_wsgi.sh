@@ -2,7 +2,7 @@
 
 t_Log "Running $0 - Apache httpd mod_wsgi is functional"
 
-if [[ $centos_ver -lt 6 || $centos_ver -gt 7 ]]; then
+if [[ $el_ver -lt 6 || $el_ver -gt 7 ]]; then
     t_Log "mod_wsgi not available before CentOS 6 or after CentOS 7 -> SKIP"
     exit 0
 fi
@@ -23,7 +23,7 @@ def application(environ, start_response):
     return [output]
 EOF
 
-if [[ $centos_ver -ge 7 ]]; then
+if [[ $el_ver -ge 7 ]]; then
     systemctl restart httpd
 else
     service httpd restart
@@ -32,7 +32,7 @@ fi
 curl -s http://localhost/tfapp | grep -q 't_functional_mod_wsgi_test'
 t_CheckExitStatus $?
 
-if [[ $centos_ver -ge 7 ]]; then
+if [[ $el_ver -ge 7 ]]; then
     systemctl stop httpd
 else
     service httpd stop

@@ -2,7 +2,7 @@
 
 t_Log "Running $0 - installing python38-mod_wsgi"
 
-if [[ $centos_ver -lt 8 ]]; then
+if [[ $el_ver -lt 8 ]]; then
     t_Log "python38-mod_wsgi doesn't exist before CentOS 8 -> SKIP"
     exit 0
 fi

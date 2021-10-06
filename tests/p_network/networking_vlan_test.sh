@@ -4,7 +4,7 @@
 t_Log "Running $0 - create VLAN IF, assign IP on VLAN IF and tear down VLAN IF using IP command test (not on C5)"
 ret_val=0
 
-if [ $centos_ver -lt 6 ]
+if [ $el_ver -lt 6 ]
 then
   t_Log ' This is a C5 system, skipping test'
   exit 0

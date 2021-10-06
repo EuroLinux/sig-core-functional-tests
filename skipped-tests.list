@@ -1,10 +1,12 @@
 # This file contains list of tests we need/want to skip
 # Reason is when there is upstream bug that we're aware of 
 # So this file should contain:
-#  - centos version (using $centos_ver)
+#  - centos version (using $el_ver)
 #  - test to skip (tests/p_${name}/test.sh)
 #  - reason why it's actually skipped (url to upstream BZ, or bug report)
 # Separated by |
 8|tests/p_gzip/30-gzexe-test|https://apps.centos.org/kanboard/project/23/task/833
 8|tests/p_diffutils/10-cmp-tests|https://bugzilla.redhat.com/show_bug.cgi?id=1732960
 
+#EuroLinux
+8|tests/p_kernel/02_kernel_secureboot_signed.sh|https://app.clickup.com/t/kzb4wy

@@ -5,7 +5,7 @@
 . $(dirname "$0")/p_java-openjdk-common
 
 for i in $JAVA_VERSIONS;do
-t_Log "Running $0 - javac can compile and java can print 'hello centos'"
+t_Log "Running $0 - javac can compile and java can print 'hello eurolinux'"
 
 # selecting the right alternative
 t_Select_Alternative java "(jre|java)-$i-openjdk"
@@ -20,7 +20,7 @@ cat > $FILE2 <<EOF
 public class HelloWorld {
 
   public static void main(String[] args) {
-    System.out.println("hello centos");
+    System.out.println("hello eurolinux");
   }
 }
 EOF
@@ -36,7 +36,7 @@ fi
 # executing java
 workpath=$(pwd)
 cd $PATH2FILE
-java $FILE |grep -q 'hello centos'
+java $FILE |grep -q 'hello eurolinux'
 
 t_CheckExitStatus $?
 

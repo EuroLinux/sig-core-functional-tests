@@ -80,7 +80,7 @@ function bru_del_bridge_8
 
 function bru_add_bridge
 {
-  if [ "$centos_ver" -ge 8 ] ; then
+  if [ "$el_ver" -ge 8 ] ; then
     bru_add_bridge_8 $1
   else
     bru_add_bridge_7 $1
@@ -89,7 +89,7 @@ function bru_add_bridge
 
 function bru_del_bridge
 {
-  if [ "$centos_ver" -ge 8 ] ; then
+  if [ "$el_ver" -ge 8 ] ; then
     bru_del_bridge_8 $1
   else
     bru_del_bridge_7 $1

@@ -5,7 +5,7 @@
 
 t_Log "Running $0 - testing a local git clone operation"
 
-if [ $centos_ver -ge 6 ]
+if [ $el_ver -ge 6 ]
   then
   # Testing Git clone by comparing SHAs
   workpath=$(pwd)

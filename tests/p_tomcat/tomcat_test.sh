@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Athmane Madjoudj <athmanem@gmail.com>
 
-if [ "$centos_ver" -ge "8" ] ; then
+if [[ "$el_ver" -ge "8" ]] ; then
    exit 0
 fi
 uname_arch=$(uname -m)
@@ -12,7 +12,7 @@ uname_arch=$(uname -m)
 t_Log "Running $0 - Tomcat basic test."
 #fi
 
-if [ "$centos_ver" = "7" ] ; then
+if [ "$el_ver" = "7" ] ; then
  string_tosearch="you've successfully installed Tomcat. Congratulations!"
 else
  string_tosearch="you've setup Tomcat successfully. Congratulations!"

@@ -4,7 +4,7 @@
 
 t_Log "Running $0 - MySQL55 drop database test."
 
-if [ $centos_ver -gt 5 ]
+if [ $el_ver -gt 5 ]
 then
   t_Log 'mysql55 is only supported on C5, skipping'
   t_CheckExitStatus 0       

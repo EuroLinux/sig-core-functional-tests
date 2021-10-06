@@ -9,12 +9,12 @@ t_SkipReleaseGreaterThan 7 'use module-aware tests instead'
 # Install php-mysql/php-mysqld module depending on version
 # we need a working and running mysql server
 #starting with 5.10 we need to reflect mysql55
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
 then
   t_InstallPackage mysql-server mysql55-mysql-server nc php-mysql
   t_ServiceControl mysql55-mysqld stop
   t_ServiceControl mysqld start >/dev/null 2>&1
-elif [ $centos_ver = 6 ]
+elif [ $el_ver = 6 ]
 then
   t_InstallPackage mysql-server nc php-mysql
   t_ServiceControl mysqld start >/dev/null 2>&1

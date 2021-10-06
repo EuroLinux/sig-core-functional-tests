@@ -3,8 +3,8 @@
 
 t_Log "Running $0 - gcc-gnat can build a hello.adb"
 
-if [ "$centos_ver" -ne 7 ] ; then
-  t_Log "CentOS $centos_ver -> SKIP"
+if [ "$el_ver" -ne 7 ] ; then
+  t_Log "EuroLinux $el_ver -> SKIP"
   exit 0
 fi
 
@@ -18,7 +18,7 @@ with Ada.Text_IO;
 
 procedure GccTestHello is
 begin
-  Ada.Text_IO.Put_Line("hello, centos!");
+  Ada.Text_IO.Put_Line("hello, eurolinux!");
 end GccTestHello;
 EOF
 
@@ -26,7 +26,7 @@ EOF
 gnat make -o $EXE $FILE
 
 # run EXE
-$EXE |grep -q 'hello, centos'
+$EXE |grep -q 'hello, eurolinux'
 t_CheckExitStatus $?
 
 # remove files

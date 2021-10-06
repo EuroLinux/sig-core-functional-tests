@@ -5,7 +5,7 @@
 
 t_Log "Running $0 - installing lzop"
 
-if [ $centos_ver = 5 ]
+if [ $el_ver = 5 ]
   then
   t_Log "This is a C5 system. Skipping."
 elif [ $(t_GetArch) = i686 ]

@@ -2,9 +2,9 @@
 # Author: Fabian Arrotin
 
 t_Log "Running $0 -  install package selinux policycoreutils tools"
-if [ "$centos_ver" = "6" ] ; then
+if [ "$el_ver" = "6" ] ; then
   t_InstallPackage policycoreutils-python
-elif [ "$centos_ver" = "8" ] ; then
+elif [ "$el_ver" = "8" ] ; then
   t_InstallPackage python3-libselinux
 else
   t_InstallPackage libselinux-python
