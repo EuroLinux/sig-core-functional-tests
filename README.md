@@ -9,7 +9,7 @@ probably better place to not EuroLinux specific contribution.
 git remote add upstream git@github.com:CentOS/sig-core-t_functional.git
 git pull origin master
 ... # RESOLVE CONFLICTS
-git add . 
+git add .
 git commit -m 'Pulled from upstream'
 git push origin master
 # Additionally the following should be made
@@ -23,7 +23,8 @@ To run these tests on your local machine :
 ./runtests.sh
 ```
 
-To only run a specific test ( eg. p_openssh ) : 
+To only run a specific test ( eg. p_openssh ) :
+
 ```
 ./runtests.sh p_openssh
 ```
@@ -43,12 +44,16 @@ the same process is used on CI/CD sollution.
 
 ## Writing tests
 
-There is a dedicated [wiki page](http://wiki.centos.org/QaWiki/AutomatedTests/WritingTests/t_functional) covering that. As a newcomer, you should read this document from start to finish. 
+There is a dedicated [wiki page](http://wiki.centos.org/QaWiki/AutomatedTests/WritingTests/t_functional)
+covering that. As a newcomer, you should read this document from start to
+finish.  
 Questions/comments/suggestions should be voiced in the #centos-devel channel on Libera IRC, or via email on the centos-devel@centos.org mailing list.
 
 ## Disabling tests
 
-While it's a very bad idea, sometimes , during major.minor release, our scripts really find issues that are then repored upstream.
-For the time being, one can add tests to be skipped by our QA harness setup (validating all new installable trees)
+While it's a very bad idea, sometimes , during major.minor release, our scripts
+really find issues that are then repored upstream.  For the time being, one can
+add tests to be skipped by our QA harness setup (validating all new installable
+trees)
 
 See the [skipped-tests.list](skipped-tests.list) file.
