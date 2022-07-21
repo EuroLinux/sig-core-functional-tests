@@ -25,6 +25,32 @@ correct_vagrant(){
 # correct vagrant enviroment
 correct_vagrant
 
+while (( "$#" )); do
+    case "$1" in
+        -p|--prod)
+            PROD_FLAG=1
+            shift
+            ;;
+        -*|--*=) # unsupported flags
+            echo "Error: Unsupported flag $1" >&2
+            exit 1
+            ;;
+        *) # preserve positional arguments
+            PARAMS="$PARAMS $1"
+            shift
+        ;;
+    esac
+done
+
+# set positional arguments in their proper place
+eval set -- "$PARAMS"
+
+
+# correct vagrant enviroment
+if [[ -z $PROD_FLAG ]]; then
+    correct_vagrant
+fi
+
 sudo yum -y update
 uname -a
 export LANG=en_US.UTF-8

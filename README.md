@@ -2,14 +2,6 @@ This Code is written for and used in the CentOS Automated QA tests process. We w
 
 See the doc directory for additional information on test writing.
 
-## Nightly Test Status
-
-| EuroLinux Version/Architecture | Build Status |
-| --------------------------- | ------------ |
-| EuroLinux 8 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=el8-qa-pre%2Fmaster&config=sig_core-tests)](https://jenkins.eurolinux.local/job/el8-qa-pre/job/master/) |
-| EuroLinux 7 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=EL-QA-sig-core-t_functional-el7)](https://jenkins.eurolinux.local/job/EL-QA-sig-core-t_functional-el7/) |
-| EuroLinux 6 - x86_64           | [![Build Status](https://jenkins.eurolinux.local/buildStatus/icon?job=EL-QA-sig-core-t_functional-el6)](https://jenkins.eurolinux.local/job/EL-QA-sig-core-t_functional-el6/) |
-
 ## Pulling from upstream
 ```bash
 git remote add upstream git@github.com:CentOS/sig-core-t_functional.git
@@ -48,7 +40,7 @@ exactly the same process is used on jenkins.
 ## Writing tests
 
 There is a dedicated [wiki page](http://wiki.centos.org/QaWiki/AutomatedTests/WritingTests/t_functional) covering that. As a newcomer, you should read this document from start to finish. 
-Questions/comments/suggestions should be voiced in the #centos-devel channel on Freenode IRC, or via email on the centos-devel@centos.org mailing list.
+Questions/comments/suggestions should be voiced in the #centos-devel channel on Libera IRC, or via email on the centos-devel@centos.org mailing list.
 
 ## Disabling tests
 
