@@ -22,6 +22,10 @@ function t_CheckExitStatus
 # Arguments: a space separated list of package names to install.
 function t_InstallPackage
 {
+    if [ "$el_ver" -ge "8" ]; then
+        mkdir /var/cache/{dnf,yum,system-upgrade}
+        dnf makecache
+    fi
 	t_Log "Attempting yum install: $*"
 	/usr/bin/yum -y -d${YUMDEBUG} install "$@"
   # TODO: add a hook here, to make sure all binary files have ldd run

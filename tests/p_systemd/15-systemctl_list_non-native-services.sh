@@ -3,6 +3,12 @@
 #         Rene Diepstraten <rene@renediepstraten.nl>
 
 [ ${el_ver} -lt 7 ] && exit
+
+if [ "$CONTAINERTEST" -eq "1" ]; then
+    t_Log "Running in container -> SKIP"
+    exit 0
+fi
+
 t_Log "Running $0 - Checking if systemctl can check if a non-native service is enabled"
 
 systemctl is-enabled kdump.service 2> /dev/null | grep -q -E 'enabled|disabled'

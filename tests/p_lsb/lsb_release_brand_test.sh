@@ -11,6 +11,14 @@ if [ "$uname_arch" == "armv7l" ]; then
   exit 0
 fi
 
+if (t_GetPkgRel basesystem | grep -q el9)
+then
+  t_Log "This is a EuroLinux 9 system. redhat-lsb not present. Skipping."
+  t_CheckExitStatus 0
+  exit $PASS
+fi
+
+
 lsb_release -i | grep -q "EuroLinux" && \
 lsb_release -d | grep -q "EuroLinux"
 

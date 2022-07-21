@@ -3,8 +3,8 @@
 
 t_Log "$0 - installing Lynx"
 
-if [ "$el_ver" -eq "8" ]; then
-  t_Log "Package lynx not available in default repos on c8 => SKIP"
+if [ "$el_ver" -ge "8" ]; then
+  t_Log "Package lynx not available in default repos on eurolinux >= 8 => SKIP"
   exit 0
 fi
 

@@ -3,14 +3,14 @@
 
 t_Log "Running $0 - installing rsync and xinetd."
 
-if [ "$el_ver" = "8" ] ; then
-  t_InstallPackage xinetd rsync rsync-daemon
+if [ "$el_ver" -ge 8 ]; then
+  t_InstallPackage rsync rsync-daemon
 else
   t_InstallPackage xinetd rsync
 fi
 
 # Restart in case previous tests allready installed xinetd
-if [ "$el_ver" = "7" ] || [ "$el_ver" = "8" ]; then
+if [ "$el_ver" -ge 7 ]; then
  systemctl start rsyncd.service
 else
  # enable rsync in /etc/xinet.d/rsync

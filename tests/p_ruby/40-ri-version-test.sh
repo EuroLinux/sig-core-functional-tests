@@ -8,8 +8,8 @@
 t_Log "Running $0 - Check version of ruby ri."
 
 #allready prepared just in case versions should change between C5 and C6
-if [ "$el_ver" = "8" ] ; then
-  ri -v | grep -q '6.0'
+if [ "$el_ver" -ge "8" ] ; then
+  ri -v | grep -q '6.'
   ret_val=$?
 elif [ "$el_ver" = "7" ] ; then
   ri -v | grep -q '4.0'
