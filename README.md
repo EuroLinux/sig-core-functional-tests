@@ -5,7 +5,7 @@ See the doc directory for additional information on test writing.
 ## Pulling from upstream
 ```bash
 git remote add upstream git@github.com:CentOS/sig-core-t_functional.git
-git pull origin master
+git pull upstream master
 ... # RESOLVE CONFLICTS
 git add . 
 git commit -m 'Pulled from upstream'
