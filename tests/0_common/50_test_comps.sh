@@ -14,7 +14,9 @@ if [ "$el_ver" -eq "7" ]; then
 fi
 
 # Get **all** the group IDs
-ALL_GROUPS=`dnf group list -v --hidden | grep '^   ' | sed 's/.*(\(.*\))$/\1/'`
+# TODO
+# FIXME
+ALL_GROUPS=$(dnf group list -v --hidden | grep '^   ' | sed 's/.*(\(.*\))$/\1/' | grep -v "powertools-builder" | grep -v 'crb') 
 
 for GROUP in $ALL_GROUPS; do
     t_Log " - testing group $GROUP"
