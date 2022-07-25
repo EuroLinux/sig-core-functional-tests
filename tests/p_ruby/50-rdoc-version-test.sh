@@ -8,7 +8,7 @@
 t_Log "Running $0 - Check version of rdoc."
 
 #allready prepared just in case versions should change between C5 and C6
-if [ "$el_ver" = "8" ] ; then
+if [ "$el_ver" -ge "8" ] ; then
   rdoc -v | grep -q '6.0'
   ret_val=$?
 elif [ "$el_ver" = "7" ] ; then

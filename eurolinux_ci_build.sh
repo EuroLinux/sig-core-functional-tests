@@ -22,6 +22,9 @@ correct_vagrant(){
     rm -rf .git
 }
 
+# correct vagrant enviroment
+correct_vagrant
+
 while (( "$#" )); do
     case "$1" in
         -p|--prod)

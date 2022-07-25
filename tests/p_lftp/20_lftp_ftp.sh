@@ -7,13 +7,21 @@
 
 t_Log "Running $0 - installing vsFTPd for local lftp test."
 t_InstallPackage vsftpd
-if [ "$el_ver" -ge 8 ] ; then
-cp -fp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.tf_p_lftp
-sed -i 's/anonymous_enable=NO/anonymous_enable=YES/g' /etc/vsftpd/vsftpd.conf
+
+if [ "$CONTAINERTEST" -eq "1" ]; then
+    t_Log "Running in container -> SKIP"
+    exit 0
 fi
-t_ServiceControl vsftpd restart
+
 if [ "$el_ver" -ge 8 ] ; then
-mv -f /etc/vsftpd/vsftpd.conf.tf_p_lftp /etc/vsftpd/vsftpd.conf
+    cp -fp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.tf_p_lftp
+    sed -i 's/anonymous_enable=NO/anonymous_enable=YES/g' /etc/vsftpd/vsftpd.conf
+fi
+
+t_ServiceControl vsftpd restart
+
+if [ "$el_ver" -ge 8 ] ; then
+    mv -f /etc/vsftpd/vsftpd.conf.tf_p_lftp /etc/vsftpd/vsftpd.conf
 fi
 
 # Destination File

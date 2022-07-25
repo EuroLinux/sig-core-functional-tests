@@ -3,7 +3,7 @@
 
 t_Log "Running $0 - check iptables default rules"
 
-if [ "$el_ver" = "7" ] || [ "$el_ver" = "8" ];then
+if [ "$el_ver" -ge 7 ];then
  t_Log "EuroLinux $el_ver uses firewalld and not iptables -> SKIP"
  t_CheckExitStatus 0
  exit 0

@@ -4,10 +4,6 @@
 
 uname_arch=$(uname -m)
 
-if [ $SKIP_QA_HARNESS -eq 1 ] && [ "$PRE_UPDATES" != "1" ] ; then
-    t_Log "Skip $0 in non QA harness environment"
-    ret_val=0
-else
   ret_val=0
   if [ "$el_ver" = "7" ] ; then
    t_Log "Running $0 - Checking current repositories for .el7.centos on modified files"
@@ -28,4 +24,3 @@ else
 
 
   t_CheckExitStatus $ret_val
-fi
