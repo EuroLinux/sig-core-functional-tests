@@ -2,6 +2,11 @@
 # Author: Fabian Arrotin <arrfab@centos.org>
 # Author: Alex Baranowski <ab@euro-linux.com>
 
+if [ "$el_ver" -eq "9" ];then
+    echo "Skipping for EuroLinux 9"
+    exit 0
+fi
+
 if [ "$el_ver" -gt "7" ];then
     t_Log "Running $0 - /etc/os-release has correct ABRT string for EuroLiux $el_ver"
     if [ "$el_ver" -eq "7" ];then

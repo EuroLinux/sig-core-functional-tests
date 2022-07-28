@@ -18,7 +18,7 @@ fi
 
 sleep 1
 
-if [ "$el_ver" -eq "8" ]; then
+if [ "$el_ver" -ge "8" ]; then
   t_Log "Dumping journalctl to /var/log/maillog"
   journalctl -u sendmail >> /var/log/maillog
 fi

@@ -2,9 +2,18 @@
 # Author: Alex Baranowski
 
 t_Log "Running $0 - EuroLinux repo sanity test."
-
-if [[ $el_ver -eq 8 ]]; then
-    t_Log "rhn-channel dont work on el8 -> SKIP"
+set -x
+if [[ $el_ver -eq 9 ]]; then
+    [ -e /etc/yum.repos.d/eurolinux.repo ]
+    t_CheckExitStatus $?
+    grep BaseOS /etc/yum.repos.d/eurolinux.repo
+    t_CheckExitStatus $?
+    exit 0
+elif [[ $el_ver -eq 8 ]]; then
+    [ -e /etc/yum.repos.d/certify.repo ]
+    t_CheckExitStatus $?
+    grep BaseOS /etc/yum.repos.d/certify.repo
+    t_CheckExitStatus $?
     exit 0
 fi
 

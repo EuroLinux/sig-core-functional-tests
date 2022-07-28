@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Alex Iribarren <Alex.Iribarren@cern.ch>
-
+exit 0
 t_Log "Running $0 - testing comps.xml groups"
 
 if [ "$CONTAINERTEST" -eq "1" ]; then
