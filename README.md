@@ -3,6 +3,7 @@ This Code is written for and used in the CentOS Automated QA tests process. We w
 See the doc directory for additional information on test writing.
 
 ## Pulling from upstream
+
 ```bash
 git remote add upstream git@github.com:CentOS/sig-core-t_functional.git
 git pull upstream master
@@ -11,12 +12,12 @@ git add .
 git commit -m 'Pulled from upstream'
 git push origin master
 # Additionally the following should be made
-grep 'el_ver' -R . # check if there are any files that has el_ver
+grep 'centos_ver' -R . # check if there are any files that has centos_ver
 ./debrand.sh
 ```
 ## Running tests
 
-To run these tests on your local machine :
+To run these tests on your local machine **(DO NOT do that if it's NOT the test machine)**:
 ```
 ./runtests.sh
 ```
@@ -26,17 +27,21 @@ To only run a specific test ( e.g. p_openssh ) :
 ./runtests.sh p_openssh
 ```
 
-## Checking test scripts
+## Checking test scripts/running all tests in controlled environment
 
-Best way of checking if tests are correct is to run them on eurolinux 6 and 7 vagrant boxes in conjunction with [el_buildtools/qa](https://git.bel.lan/tools/el-buildtools/-/tree/master/qa) scripts.  
-Simply:
+The easiest way of checking if tests are passing/correct is to run them on
+eurolinux 6,7,8 or 9 vagrant box.
+
 ```
-git clone git@git.bel.lan:tools/el-buildtools.git --recurse-submodules
-cd el-buildtools/qa
-export PROFILE=<el6|el7>
-./run_vagrant.sh sig-core-t_functional/eurolinux_ci_build.sh
+VER=9
+vagrant init eurolinux-vagrant/eurolinux-$VER
+vagrant up
+# for rsynced boxes
+vagrant ssh -c "cd /vagrant; sudo /vagrant/runtests.sh"
 ```
-exactly the same process is used on jenkins.
+
+Nearly identical processes run on our CI/CD.
+
 ## Writing tests
 
 There is a dedicated [wiki page](http://wiki.centos.org/QaWiki/AutomatedTests/WritingTests/t_functional) covering that. As a newcomer, you should read this document from start to finish. 
