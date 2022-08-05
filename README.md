@@ -12,7 +12,7 @@ git add .
 git commit -m 'Pulled from upstream'
 git push origin master
 # Additionally the following should be made
-grep 'centos_ver' -R . # check if there are any files that has centos_ver
+grep 'centos_ver' -R . # check if there are any file that has centos_ver
 ./debrand.sh
 ```
 ## Running tests
@@ -27,7 +27,7 @@ To only run a specific test ( e.g. p_openssh ) :
 ./runtests.sh p_openssh
 ```
 
-## Checking test scripts/running all tests in controlled environment
+## Checking test scripts/running all tests in a controlled environment
 
 The easiest way of checking if tests are passing/correct is to run them on
 eurolinux 6,7,8 or 9 vagrant box.
