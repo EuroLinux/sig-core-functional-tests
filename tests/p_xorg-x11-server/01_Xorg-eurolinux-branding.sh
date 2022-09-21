@@ -6,7 +6,7 @@ t_Log "Running $0 - Testing that Xorg has been patched to use EuroLinux bugtrack
 
 if [ $el_ver = 6 ]
 then
-    X --wrong-arg   2>&1 | grep -q 'wiki.centos.org'
+    X --wrong-arg   2>&1 | grep -q 'scientific'  || X --wrong-arg   2>&1 | grep -q 'eurolinux' 
 else
     t_Log "EuroLinux 5 Xorg does not need checking"
 fi
