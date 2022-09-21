@@ -14,7 +14,7 @@ import os
 
 yb = yum.YumBase()
 
-el_repos = ['el-server-7-x86_64-qa','el-server-7-x86_64','el-updates','el-base']
+el_repos = ['el-server-7-x86_64-qa','el-server-7-x86_64','el-updates','el-base', 'BaseOS', 'Extras', 'BaseOS-stagging', 'Extras-stagging']
 el_repos += sum([['el-server-%d-x86_64' % i, 'el-server-%d-x86_64-qa' % i ] for i in (6,7)], [])
 print el_repos
 now = lambda: datetime.datetime.today().strftime("%c")
