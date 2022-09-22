@@ -12,6 +12,11 @@ if [ "$el_ver" -eq "7" ] ; then
  t_Log "EuroLinux TODO. SKIP"
  exit 0
 fi
+# TODO
+if [ "$el_ver" -eq "6" ] ; then
+ t_Log "EuroLinux TODO. SKIP"
+ exit 0
+fi
 
 
 isAltArch=$(uname -m|egrep -q 'armv7l|aarch64|ppc64|ppc64le'|| echo 1 && echo 0)
