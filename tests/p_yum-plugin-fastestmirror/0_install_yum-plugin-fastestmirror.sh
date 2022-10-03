@@ -8,8 +8,8 @@ if [ "$el_ver" -ge "8" ] ; then
 fi
 
 # TODO
-if [ "$el_ver" -eq "7" ] ; then
- t_Log "EuroLinux TODO. SKIP"
+if [ "$el_ver" -eq "7" ] || [ "$el_ver" -eq "6" ] ; then
+ t_Log "EuroLinux does not use it. SKIP"
  exit 0
 fi
 rpm -qa | egrep -q 'yum-.*fastestmirror'

@@ -3,13 +3,9 @@
 
 t_Log "Running $0 - Squid test."
 
-URL="https://en.euro-linux.com/"
-CHECK_FOR="EuroLinux"
-
-if [ "$el_ver" -eq "6" ]; then
-    URL="https://www.google.com"
-    CHECK_FOR="Google"
-fi
+# Do not use euro-linux.com as our security is stricker than this old squid
+URL="https://www.google.com/"
+CHECK_FOR="Google"
 
 squidclient -T 2 ${URL} | grep "${CHECK_FOR}"  >/dev/null 2>&1
 
